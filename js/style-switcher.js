@@ -38,9 +38,12 @@ window.addEventListener("load",() =>{
     }
 })
 
-const styleNavList = document.querySelector('.nav-list')
-styleNavList.click(function() {     
-    $('.nav-list').closest('li').removeClass("active")
-    $(this).closest('li').addClass("active")  
-    console.log($(this).data("url"))
-})
+var nav = document.getElementById("nav");
+var navlists = nav.getElementsByClassName("navlist");
+for (var i = 0; i < navlists.length; i++) {
+    navlists[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}

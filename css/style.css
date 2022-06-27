@@ -45,8 +45,22 @@ body {
     padding-top: 30px;
 }
 
-.intro{
-    transition: opacity 1s ease, transform 1s ease;
+.aside > *,
+.section > * {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .hidden {
@@ -113,6 +127,7 @@ body {
     margin-left: -15px;
     margin-right: -15px;
     position: relative;
+    justify-content: space-between;
 } 
 
 .btn {
@@ -540,10 +555,11 @@ h3.my-profession {
 .service .container{
     padding-bottom: 40px;
 }
+
 .service .service-item{
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     flex: 0 0 33.33%;
-    max-width: 33.33%;
+    max-width: 30%;
 }
 
 .service .service-item .service-item-inner{
