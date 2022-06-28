@@ -127,8 +127,12 @@ body {
     margin-left: -15px;
     margin-right: -15px;
     position: relative;
+}
+
+.service .row,
+.contact .row{
     justify-content: space-between;
-} 
+}
 
 .btn {
     font-size: 16px;
